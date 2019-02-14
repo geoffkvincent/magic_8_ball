@@ -77,6 +77,10 @@ class Magic8
     menu
   end
 
+  def check_duplicate(word_to_check)
+    ANSWERS.include word_to_check
+  end
+
   def add_answer
     puts "What Answer Do You Wish To Add?"
     @user_answer = gets.strip
