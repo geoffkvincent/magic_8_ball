@@ -78,7 +78,7 @@ class Magic8
   end
 
   def check_duplicate(word_to_check)
-    ANSWERS.include word_to_check
+    ANSWERS.include? word_to_check
   end
 
   def add_answer
@@ -86,13 +86,11 @@ class Magic8
     @user_answer = gets.strip
     # ANSWERS.push @user_answer
     # menu
-    ANSWERS.each do |answer|
-      if answer != @user_answer
-        ANSWERS.push @user_answer
-        puts "Your Answers Been Added"
-      else
-        puts "Answer Already Exists"
-        binding.pry
+    if ANSWERS.include? @user_answer
+      puts "Answer Already Exists"
+    else
+      ANSWERS.push @user_answer
+      puts "Your Answers Been Added"
       end
     end
   end
