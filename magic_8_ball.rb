@@ -3,26 +3,26 @@ require 'colorize'
 
 class Magic8
   ANSWERS = [
-    "It is certain.".colorize(:green),
-    "It is decidedly so.".colorize(:green),
-    "Without a doubt.".colorize(:green),
-    "Yes - definitely.".colorize(:green),
-    "You may rely on it.".colorize(:green),
-    "As I see it, yes.".colorize(:green),
-    "Most likely.".colorize(:green),
-    "Outlook good.".colorize(:green),
-    "Yes.".colorize(:green),
-    "Signs point to yes.".colorize(:green),
-    "Reply hazy, try again.".colorize(:yellow),
-    "Ask again later.".colorize(:yellow),
-    "Better not tell you now.".colorize(:yellow),
-    "Cannot predict now.".colorize(:yellow),
-    "Concentrate and ask again.".colorize(:yellow),
-    "Don't count on it.".colorize(:red),
-    "My reply is no.".colorize(:red),
-    "My sources say no.".colorize(:red),
-    "Outlook not so good.".colorize(:red),
-    "Very doubtful.".colorize(:red)
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes - definitely.",
+    "You may rely on it.",
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Yes.",
+    "Signs point to yes.",
+    "Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now.",
+    "Cannot predict now.",
+    "Concentrate and ask again.",
+    "Don't count on it.",
+    "My reply is no.",
+    "My sources say no.",
+    "Outlook not so good.",
+    "Very doubtful."
   ]
 
   ORG_ANSWERS = ANSWERS.clone
@@ -83,10 +83,8 @@ class Magic8
 
   def add_answer
     puts "What Answer Do You Wish To Add?"
-    @user_answer = gets.strip
-    # ANSWERS.push @user_answer
-    # menu
-    if ANSWERS.include? @user_answer
+    user_answer = gets.strip
+    if ANSWERS.include? user_answer
       puts "Answer Already Exists"
       add_answer
     else
