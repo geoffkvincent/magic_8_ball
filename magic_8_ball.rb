@@ -4,7 +4,7 @@ require 'colorize'
 class Magic8
 
   ANSWERS = [
-    "It is certain.".colorize(:blue),
+    "It is certain.".colorize(:green),
     "It is decidedly so.".colorize(:green),
     "Without a doubt.".colorize(:green),
     "Yes - definitely.".colorize(:green),
@@ -37,11 +37,62 @@ class Magic8
   end
 
   def menu
+    puts "What would you wish to do?"
+    puts "1) Ask A Question"
+    puts "2) Add An Answer"
+    puts "3) Answer Reset"
+    puts "4) Print All Answers"
+    puts "5) Exit"
+    @user_input = gets.to_i
+    menu_choice
+  end
+
+  def menu_choice
+    case @user_input
+    when 1
+      question
+    when 2
+      add_answer
+    when 3
+      answer_reset
+    when 4
+      show_answers
+    when 5
+      puts "Goodbye"
+      exit
+    else
+      puts "invalid input".colorize(:red)
+      menu
+    end
+  end
+
+  def question
     puts "Ask Me A Question"
     question = gets.strip
     puts '.......shaking'
     puts ANSWERS.sample
   end
+
+  def add_answer
+    puts "What Answer Do You Wish To Add?"
+    @user_answer = gets.strip
+    ANSWERS.push @user_answer
+    menu
+    # ANSWERS.each do |answer|
+    #   if answer != @user_answer
+    #     ANSWERS.push @user_answer
+    #     puts "Your Answers Been Added"
+    #   else
+    #     puts "Answer Already Exists"
+    #   end
+    # end
+  end
+
+  def show_answers
+    puts ANSWERS
+    menu
+  end
+
 end
 
 magic = Magic8.new
