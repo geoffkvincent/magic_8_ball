@@ -26,10 +26,23 @@ class Magic8
     "Very doubtful.".colorize(:red)
   ]
 
+  def greeting
+    puts ""
+    puts ""
+    puts '    Welcome to Magic 8 Ball'.colorize(:yellow)
+    puts "--------------------------------".colorize(:yellow)
+    puts "88888888888888888888888888888888".colorize(:green)
+    puts "--------------------------------".colorize(:yellow)
+    menu
+  end
+
   def menu
-    puts ANSWERS
+    puts "Ask Me A Question"
+    question = gets.strip
+    puts '.......shaking'
+    puts ANSWERS.sample
   end
 end
 
 magic = Magic8.new
-magic.menu
+magic.greeting
