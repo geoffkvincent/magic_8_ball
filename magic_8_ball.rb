@@ -24,7 +24,7 @@ class Magic8
     "Outlook not so good.".colorize(:red),
     "Very doubtful.".colorize(:red)
   ]
-  
+
   ORG_ANSWERS = ANSWERS.clone
 
   def greeting
@@ -98,3 +98,5 @@ end
 
 magic = Magic8.new
 magic.greeting
+
+
