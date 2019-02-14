@@ -72,21 +72,23 @@ class Magic8
     question = gets.strip
     puts '.......shaking'
     puts ANSWERS.sample
+    menu
   end
 
   def add_answer
     puts "What Answer Do You Wish To Add?"
     @user_answer = gets.strip
-    ANSWERS.push @user_answer
-    menu
-    # ANSWERS.each do |answer|
-    #   if answer != @user_answer
-    #     ANSWERS.push @user_answer
-    #     puts "Your Answers Been Added"
-    #   else
-    #     puts "Answer Already Exists"
-    #   end
-    # end
+    # ANSWERS.push @user_answer
+    # menu
+    ANSWERS.each do |answer|
+      if answer != @user_answer
+        ANSWERS.push @user_answer
+        puts "Your Answers Been Added"
+      else
+        puts "Answer Already Exists"
+        binding.pry
+      end
+    end
   end
 
   def show_answers
