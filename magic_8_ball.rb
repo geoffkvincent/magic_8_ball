@@ -2,7 +2,6 @@ require 'pry'
 require 'colorize'
 
 class Magic8
-
   ANSWERS = [
     "It is certain.".colorize(:green),
     "It is decidedly so.".colorize(:green),
@@ -25,6 +24,8 @@ class Magic8
     "Outlook not so good.".colorize(:red),
     "Very doubtful.".colorize(:red)
   ]
+  
+  ORG_ANSWERS = ANSWERS.clone
 
   def greeting
     puts ""
