@@ -38,7 +38,9 @@ class Magic8
   end
 
   def menu
-    puts "What would you wish to do?"
+    puts "-------------------------".colorize(:yellow)
+    puts "What would you wish to do?".colorize(:green)
+    puts "-------------------------".colorize(:yellow)
     puts "1) Ask A Question"
     puts "2) Add An Answer"
     puts "3) Answer Reset"
