@@ -88,10 +88,11 @@ class Magic8
     # menu
     if ANSWERS.include? @user_answer
       puts "Answer Already Exists"
+      add_answer
     else
       ANSWERS.push @user_answer
       puts "Your Answers Been Added"
-      end
+      menu
     end
   end
 
