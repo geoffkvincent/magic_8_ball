@@ -25,7 +25,7 @@ class Magic8
     "Very doubtful."
   ]
 
-  ORG_ANSWERS = ANSWERS.clone
+  ANSWERS_BACKUP = ANSWERS.map(&:clone)
 
   def greeting
     puts ""
@@ -62,6 +62,8 @@ class Magic8
       show_answers
     when 5
       puts "Goodbye"
+      sleep(2)
+      puts `clear`
       exit
     else
       puts "invalid input".colorize(:red)
@@ -84,7 +86,7 @@ class Magic8
       puts "Answer Already Exists"
       add_answer
     else
-      ANSWERS.push @user_answer
+      ANSWERS.push user_answer
       puts "Your Answers Been Added"
       menu
     end
@@ -94,6 +96,7 @@ class Magic8
     puts "Are You Sure? y/n"
     input = gets.strip.downcase
     if input == 'y'
+      ANSWERS = ANSWERS_BACKUP.map(&:clone)
       puts `clear`
       puts "The 8 Ball Has Been Reset"
       sleep(2)
