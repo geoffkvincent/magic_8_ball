@@ -92,10 +92,21 @@ class Magic8
 
   def answer_reset
     puts "Are You Sure? y/n"
-    input = 
-    puts `clear`
-    sleep(2)
-    menu
+    input = gets.strip.downcase
+    if input == 'y'
+      puts `clear`
+      puts "The 8 Ball Has Been Reset"
+      sleep(2)
+      menu
+    elsif input == 'n'
+      puts 'Taking You Back To Main Menu'
+      sleep(2)
+      menu
+    else
+      puts 'Invalid Input'.colorize(:red)
+      sleep(2)
+      menu
+    end
   end
 
   def show_answers
