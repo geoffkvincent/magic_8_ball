@@ -2,30 +2,33 @@ require 'pry'
 require 'colorize'
 
 class Magic8
-  ANSWERS = [
-    "It is certain.",
-    "It is decidedly so.",
-    "Without a doubt.",
-    "Yes - definitely.",
-    "You may rely on it.",
-    "As I see it, yes.",
-    "Most likely.",
-    "Outlook good.",
-    "Yes.",
-    "Signs point to yes.",
-    "Reply hazy, try again.",
-    "Ask again later.",
-    "Better not tell you now.",
-    "Cannot predict now.",
-    "Concentrate and ask again.",
-    "Don't count on it.",
-    "My reply is no.",
-    "My sources say no.",
-    "Outlook not so good.",
-    "Very doubtful."
-  ]
 
-  ANSWERS_BACKUP = ANSWERS.map(&:clone)
+  def initialize
+    @answers = [
+      "It is certain.",
+      "It is decidedly so.",
+      "Without a doubt.",
+      "Yes - definitely.",
+      "You may rely on it.",
+      "As I see it, yes.",
+      "Most likely.",
+      "Outlook good.",
+      "Yes.",
+      "Signs point to yes.",
+      "Reply hazy, try again.",
+      "Ask again later.",
+      "Better not tell you now.",
+      "Cannot predict now.",
+      "Concentrate and ask again.",
+      "Don't count on it.",
+      "My reply is no.",
+      "My sources say no.",
+      "Outlook not so good.",
+      "Very doubtful."
+    ]
+
+    @answers_backup = @answers.map(&:clone)
+  end
 
   def greeting
     puts ""
@@ -72,21 +75,22 @@ class Magic8
   end
 
   def question
+    binding.pry
     puts "Ask Me A Question"
     question = gets.strip
     puts '.......shaking'
-    puts ANSWERS.sample
+    puts @answers.sample
     menu
   end
 
   def add_answer
     puts "What Answer Do You Wish To Add?"
     user_answer = gets.strip
-    if ANSWERS.include? user_answer
+    if @answers.include? user_answer
       puts "Answer Already Exists"
       add_answer
     else
-      ANSWERS.push user_answer
+      @answers.push user_answer
       puts "Your Answers Been Added"
       menu
     end
@@ -96,7 +100,7 @@ class Magic8
     puts "Are You Sure? y/n"
     input = gets.strip.downcase
     if input == 'y'
-      ANSWERS = ANSWERS_BACKUP.map(&:clone)
+      @answers = @answers_backup.map(&:clone)
       puts `clear`
       puts "The 8 Ball Has Been Reset"
       sleep(2)
@@ -113,7 +117,7 @@ class Magic8
   end
 
   def show_answers
-    puts ANSWERS
+    puts @answers
     menu
   end
 
