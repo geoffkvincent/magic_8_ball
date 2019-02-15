@@ -90,6 +90,14 @@ class Magic8
     end
   end
 
+  def answer_reset
+    puts "Are You Sure? y/n"
+    input = 
+    puts `clear`
+    sleep(2)
+    menu
+  end
+
   def show_answers
     puts ANSWERS
     menu
