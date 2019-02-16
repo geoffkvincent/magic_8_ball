@@ -119,7 +119,7 @@ class Magic8
   end
 
   def show_answers
-    puts @answers.colorize(:magenta)
+    puts @answers
     menu
   end
 
@@ -127,4 +127,3 @@ end
 
 magic = Magic8.new
 magic.greeting
-
