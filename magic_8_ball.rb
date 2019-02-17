@@ -38,6 +38,7 @@ class Magic8
     puts "--------------------------------".colorize(:light_red)
     puts "88888888888888888888888888888888".colorize(:cyan)
     puts "--------------------------------".colorize(:light_red)
+    puts ""
     menu
   end
 
@@ -127,4 +128,3 @@ end
 
 magic = Magic8.new
 magic.greeting
-
