@@ -81,6 +81,7 @@ class Magic8
     puts "Ask Me A Question".colorize(:magenta)
     question = gets.strip
     puts '.......shaking'.colorize(:cyan)
+    sleep(2)
     puts '~~~~~~~~~~~~~~~~~~~'.colorize(:light_red)
     puts @answers.sample.colorize(:light_blue)
     puts '~~~~~~~~~~~~~~~~~~~'.colorize(:light_red)
