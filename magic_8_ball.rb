@@ -121,7 +121,7 @@ class Magic8
   end
 
   def show_answers
-    puts 'Current Answers'.colorize
+    puts 'Current Answers'.colorize(:magenta)
     puts @answers
     menu
   end
