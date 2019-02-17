@@ -96,6 +96,7 @@ class Magic8
     else
       @answers.push user_answer
       puts "Your Answers Been Added".colorize(:green)
+      sleep(1)
       menu
     end
   end
