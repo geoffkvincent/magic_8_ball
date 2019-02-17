@@ -121,7 +121,7 @@ class Magic8
   end
 
   def show_answers
-    puts ''
+    puts 'Cu'
     puts @answers
     menu
   end
