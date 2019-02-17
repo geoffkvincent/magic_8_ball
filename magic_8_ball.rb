@@ -59,7 +59,7 @@ class Magic8
   def menu_choice
     case @user_input
     when 1
-      question
+      ask_question
     when 2
       add_answer
     when 3
@@ -78,7 +78,7 @@ class Magic8
     end
   end
 
-  def question
+  def ask_question
     puts "Ask Me A Question".colorize(:magenta)
     question = gets.strip
     puts '.......shaking'.colorize(:cyan)
@@ -90,11 +90,12 @@ class Magic8
     puts 'Ask again? (y/n)'
     answer = gets.strip.downcase
     if answer == 'y'
-      question
+      ask_question
     elsif answer =='n'
       menu
     else
       puts 'Invalid Input'.colorize(:red)
+    end
   end
 
   def add_answer
