@@ -39,7 +39,6 @@ class Magic8
     puts "88888888888888888888888888888888".colorize(:cyan)
     puts "================================".colorize(:light_red)
     puts ""
-    puts ""
     menu
   end
 
@@ -87,7 +86,7 @@ class Magic8
     puts @answers.sample.colorize(:light_blue)
     puts '~~~~~~~~~~~~~~~~~~~'.colorize(:light_red)
     sleep(2)
-    puts 'Ask again? (y/n)'
+    puts 'Ask again? (y/n)'.colorize(:cyan)
     answer = gets.strip.downcase
     if answer == 'y'
       ask_question
