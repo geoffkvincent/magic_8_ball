@@ -35,17 +35,17 @@ class Magic8
     puts ""
     puts ""
     puts '    Welcome to Magic 8 Ball'.colorize(:magenta)
-    puts "--------------------------------".colorize(:light_red)
+    puts "----------".colorize(:light_red)
     puts "88888888888888888888888888888888".colorize(:cyan)
-    puts "--------------------------------".colorize(:light_red)
+    puts "================================".colorize(:light_red)
     puts ""
     menu
   end
 
   def menu
-    puts "-------------------------".colorize(:yellow)
+    puts "=========================".colorize(:yellow)
     puts "What would you wish to do?".colorize(:magenta)
-    puts "-------------------------".colorize(:yellow)
+    puts "=========================".colorize(:yellow)
     puts "1) Ask A Question".colorize(:light_red)
     puts "2) Add An Answer".colorize(:light_red)
     puts "3) Answer Reset".colorize(:light_red)
