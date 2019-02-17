@@ -121,7 +121,7 @@ class Magic8
   end
 
   def show_answers
-    puts 'Current Ans'
+    puts 'Current Answer'
     puts @answers
     menu
   end
