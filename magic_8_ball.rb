@@ -127,3 +127,4 @@ end
 
 magic = Magic8.new
 magic.greeting
+
