@@ -86,6 +86,9 @@ class Magic8
     puts '~~~~~~~~~~~~~~~~~~~'.colorize(:light_red)
     puts @answers.sample.colorize(:light_blue)
     puts '~~~~~~~~~~~~~~~~~~~'.colorize(:light_red)
+    sleep(2)
+    puts 'Ask again? (y/n)'
+    answer = gets.strip.downcase
     menu
   end
 
