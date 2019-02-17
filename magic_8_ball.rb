@@ -92,6 +92,7 @@ class Magic8
     user_answer = gets.strip
     if @answers.include? user_answer
       puts "Answer Already Exists".colorize(:red)
+      sleep(1)
       add_answer
     else
       @answers.push user_answer
