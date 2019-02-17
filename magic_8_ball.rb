@@ -89,7 +89,12 @@ class Magic8
     sleep(2)
     puts 'Ask again? (y/n)'
     answer = gets.strip.downcase
-    menu
+    if answer == 'y'
+      question
+    elsif answer =='n'
+      menu
+    else
+      puts 'Invalid Input'.colorize(:red)
   end
 
   def add_answer
