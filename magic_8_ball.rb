@@ -35,9 +35,10 @@ class Magic8
     puts ""
     puts ""
     puts '    Welcome to Magic 8 Ball'.colorize(:magenta)
-    puts "----------".colorize(:light_red)
+    puts "================================".colorize(:light_red)
     puts "88888888888888888888888888888888".colorize(:cyan)
     puts "================================".colorize(:light_red)
+    puts ""
     puts ""
     menu
   end
