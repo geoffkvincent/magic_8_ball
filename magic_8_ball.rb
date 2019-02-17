@@ -73,6 +73,7 @@ class Magic8
       exit
     else
       puts "invalid input".colorize(:red)
+      sleep(2)
       menu
     end
   end
